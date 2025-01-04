@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-optical-sizing: auto;
+    background-color: #eee;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-y: hidden;
+}
+
+h1 {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0 0 20px;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sliders {
+    width: 880px;
+    height: 450px;
+    position: relative;
+
+}
+
+.slider-id {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    z-index: 99;
+    background-color: rgb(141, 120, 75);
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+
+}
+
+.sliders img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.sliders img.active {
+    opacity: 1;
+}
+
+button {
+    padding: 0 20px;
+    font-size: 20px;
+    background-color: gray;
+    color: white;
+    border: none;
+    height: 450px;
+    cursor: pointer;
+    transition: 0.3s;
+    writing-mode: vertical-rl;
+}
+
+button:not(:disabled):hover {
+    background-color: rgb(187, 189, 185);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+}
+
+.gallary-container {
+    display: grid;
+    /* grid-template-columns: repeat(7,1fr);
+The Best Practies in write JavaScript 
+*/
+    width: 880px;
+    margin: auto;
+}
+
+.gallary-container img {
+    opacity: 0.4;
+    max-width: 100%;
+    cursor: pointer;
+
+}
+
+.gallary-container img:hover,
+.gallary-container img.active {
+    opacity: 1;
+}
+
+
+
+
+/* Mobile Responsive */
+
+
+
+@media (max-width: 500px) {
+    body {
+        font-size: 14px;
+        background-color: #e9e9e9;
+    }
+
+    .slider-container {
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    .sliders {
+        width: 100%;
+        height: 300px;
+    }
+
+    .gallary-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .slider-id {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    button {
+        height: 30px;
+        font-size: 12px;
+        writing-mode: horizontal-tb;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+
+    .sliders {
+        width: 100%;
+        height: 250px;
+    }
+
+    .gallary-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+    }
+
+    h1 {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    button {
+        height: 25px;
+        font-size: 10px;
+    }
+
+
+}
