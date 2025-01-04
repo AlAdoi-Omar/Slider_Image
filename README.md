@@ -16,4 +16,9 @@ Gallery display: Thumbnail previews for easy navigation.
 Responsive design: Optimized for both desktop and mobile devices.
 --
 ## Requirements
+
 HTML, CSS, JavaScript.😊
+--
+## See Project : 
+https://aladoi-omar.github.io/Slider_Image/
+--
